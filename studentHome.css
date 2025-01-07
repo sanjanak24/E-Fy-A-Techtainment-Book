@@ -1,0 +1,195 @@
+* {
+     padding: 0;
+     margin: 0;
+}
+
+html {
+     width: 100%;
+     height: 100%;
+}
+
+body {
+     width: 100%;
+     height: 100%;
+     display: flex;
+}
+
+header {
+     width: 15%;
+     height: 100%;
+     border-right: 1px solid #000;
+}
+
+.nav {
+     width: 100%;
+     height: 100%;
+     background: #e4e9f7;
+     list-style-type: none;
+}
+
+.nav li a {
+     padding: 2svh 1svh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #000;
+     text-decoration: none;
+}
+
+.nav li a:hover {
+     cursor: pointer;
+     background: rgba(76, 68, 182, 0.808);
+     color: #fff;
+}
+
+.container {
+     width: 85%;
+     height: 100svh;
+     height: 100%;
+     background: #e4e9f7;
+}
+
+.profile-header {
+     height: 15%;
+     padding: 1svh;
+     margin: 1svh;
+     margin-top: 1svh;
+     border-radius: 10px;
+     display: flex;
+     background-color: #fff;
+}
+
+.profile-header h1 {
+     margin: 1svh;
+}
+
+.profile-header p {
+     margin: 1svh;
+}
+
+.profile-header .header {
+     width: 90%;
+}
+
+.edit input {
+     background-color: #9B418E;
+     color: #fff;
+     border: 0;
+     padding: 1.5svh;
+     margin: 1svh;
+     cursor: pointer;
+}
+
+.profile-detail {
+     height: auto;
+     padding: 1svh;
+     margin: 1svh;
+     margin-top: 2svh;
+     display: flex;
+     flex-direction: column;
+     border-radius: 10px;
+     background-color: #fff;
+}
+
+.profile-detail h3 {
+     margin: 1svh;
+}
+
+.detail {
+     margin: 1svh;
+     padding: 2svh;
+     display: flex;
+     justify-content: center;
+}
+
+.detail .detail-col {
+     width: 50%;
+     border-radius: 20px;
+}
+
+.detail .detail-col div {
+     display: flex;
+     padding: 1svh;
+}
+
+.detail .detail-col div .pname {
+     display: flex;
+     width: 40%;
+     text-align: center;
+}
+
+.detail .detail-col div input {
+     border: 0;
+     cursor: default;
+     width: 60%;
+     outline: none;
+}
+
+.events-box {
+     padding: 1svh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.event-details {
+     width: 45%;
+     display: flex;
+     margin: 1svh;
+}
+
+.event-details .label {
+     width: 40%;
+}
+
+.event-details input {
+     border: 0;
+     cursor: default;
+     width: 60%;
+     outline: none;
+}
+
+.event-details textarea {
+     outline: 0;
+     border: 0;
+     resize: none;
+     cursor: default;
+}
+
+
+@media (max-width: 600px) {
+     header {
+          width: 30%;
+     }
+
+     .profile-header {
+          display: flex;
+          flex-direction: column;
+     }
+
+     .detail {
+          justify-content: left;
+          padding: 0;
+     }
+
+     .detail .detail-col {
+          width: 100%;
+     }
+
+     .detail .detail-col div {
+          flex-direction: column;
+     }
+
+     .detail .detail-col div .pname {
+          width: 100%;
+          text-align: center;
+     }
+
+     .detail .detail-col div input {
+          width: 100%;
+          text-align: center;
+     }
+
+
+}
