@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Rounds</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .round-button,
+      .disqualify-button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .round-button {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .disqualify-button {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .round-button[disabled] {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>College Name</th>
+          <th>Email</th>
+          <th>USN</th>
+          <th>Current Round</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Sample Row, You can add more rows dynamically using JavaScript -->
+        <tr>
+          <td>John Doe</td>
+          <td>123-456-7890</td>
+          <td>Example College</td>
+          <td>john@example.com</td>
+          <td>USN123456</td>
+          <td>1st</td>
+          <td>
+            <button class="round-button" onclick="nextRound(this)">
+              Next Round
+            </button>
+            <button
+              class="disqualify-button"
+              onclick="disqualifyParticipant(this)"
+              disabled
+            >
+              Disqualify
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      function nextRound(button) {
+        let currentRoundElement =
+          button.parentNode.parentNode.querySelector("td:nth-child(6)");
+        let currentRound = currentRoundElement.innerText;
+
+        let nextRound = getNextRound(currentRound);
+        currentRoundElement.innerText = nextRound;
+        button.innerText = `Next ${nextRound} Round`;
+      }
+
+      function getNextRound(currentRound) {
+        let currentRoundNumber = parseInt(currentRound);
+        return `${currentRoundNumber + 1}st`;
+      }
+
+      function disqualifyParticipant(button) {
+        button.parentElement.querySelector(".round-button").disabled = true;
+        // Your logic to disqualify the participant goes here
+        // You may want to update the row styling or remove the row
+      }
+    </script>
+  </body>
+</html>

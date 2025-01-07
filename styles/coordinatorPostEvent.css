@@ -1,0 +1,144 @@
+* {
+     padding: 0;
+     margin: 0;
+}
+
+html {
+     width: 100%;
+     height: 100%;
+}
+
+body {
+     width: 100%;
+     height: 100%;
+     display: flex;
+}
+
+header {
+     width: 15%;
+     height: 100%;
+     border-right: 1px solid #000;
+}
+
+.nav {
+     width: 100%;
+     height: 100%;
+     background: #e4e9f7;
+     list-style-type: none;
+}
+
+.nav li a {
+     padding: 2svh 1svh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #000;
+     text-decoration: none;
+}
+
+.nav li a:hover {
+     cursor: pointer;
+     background: rgba(76, 68, 182, 0.808);
+     color: #fff;
+}
+
+.container {
+     width: 85%;
+     height: 100svh;
+     background: #e4e9f7;
+     scroll-behavior: smooth;
+     overflow-y: scroll;
+}
+
+.event-header {
+     background-color: #fff;
+     padding: 1rem;
+     margin: 1rem;
+     border-radius: 10px;
+}
+
+.posted-events,
+.post-form {
+     height: auto;
+     overflow-y: scroll;
+     padding: 1rem;
+     margin: 1rem;
+     border-radius: 10px;
+     overflow-y: hidden;
+     background-color: #fff;
+}
+
+.label-input {
+     padding: 1rem;
+}
+
+form input {
+     width: 15%;
+     font-size: 15px;
+     padding: 1px 1px 1px 5px;
+     outline: 0;
+     border: 0;
+     border-bottom: 1px solid gray;
+}
+
+form input[type="datetime-local"] {
+     width: 21%;
+     padding: 1px 1px 1px 5px;
+     outline: 0;
+     border: 0;
+     border-bottom: 1px solid gray;
+
+}
+
+textarea {
+     width: 20%;
+     height: 10svh;
+     font-size: 15px;
+     border: 0;
+     border: 1px solid gray;
+     padding: 1px 1px 1px 5px;
+}
+
+.btn {
+     width: 30svh;
+     height: auto;
+     background: rgba(76, 68, 182, 0.808);
+     opacity: 0.82;
+     text-align: center;
+     border: 0;
+     border-radius: 5px;
+     color: #fff;
+     cursor: pointer;
+     transition: all .3s;
+     margin-top: 10px;
+     padding: 10px 10px;
+}
+
+.btn:hover {
+     opacity: 1;
+     box-shadow: 0 0 128px 0 rgba(0, 0, 1, 0.1),
+          0 32px 64px -48px rgba(0, 0, 1, 0.5);
+}
+
+@media (max-width: 600px) {
+     header {
+          width: 30%;
+     }
+
+     nav {
+          text-align: center;
+     }
+
+     .container {
+          width: 80%;
+     }
+
+     .label-input {
+          padding: 0;
+     }
+
+     form input,
+     form input[type="datetime-local"] {
+          width: 90%;
+     }
+}
