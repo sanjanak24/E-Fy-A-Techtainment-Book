@@ -1,4 +1,3 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "", "test") or die("Couldn't connect");
-
+require_once __DIR__ . "/php/config.php";

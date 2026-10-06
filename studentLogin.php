@@ -21,11 +21,7 @@ session_start(); ?>
           <div class="box form-box">
                <?php
               
-			  $servername = "localhost"; $username = "root"; $password = ""; $database = "test"; 
-// Create a connection 
-$con = mysqli_connect($servername, $username, $password, $database);
-
-			  // include "php/config.php";
+			  require_once __DIR__ . "/php/config.php";
                if (isset($_POST["submit"])) {
                     $email = mysqli_real_escape_string($con, $_POST["email"]);
                     $password = mysqli_real_escape_string($con,$_POST["password"]);
